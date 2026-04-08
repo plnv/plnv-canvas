@@ -5,7 +5,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/YOUR_ORG/plnv-canvas.git"
+        "url": "https://github.com/plnv/plnv-canvas.git"
     },
     "keywords": ["angular", "canvas", "webgl", "2d", "directive"],
     "engines": {
@@ -14,11 +14,7 @@
     "sideEffects": false,
     "type": "module",
     "scripts": {
-        "build": "ng-packagr -p ng-package.json",
-        "example": "npm run build && npm --prefix example run serve",
-        "example:serve": "npm --prefix example run serve",
-        "example:build": "npm run build && npm --prefix example run build",
-        "example:pages": "npm --prefix example run build:pages"
+        "build": "ng-packagr -p ng-package.json"
     },
     "peerDependencies": {
         "@angular/core": "^21.0.0",
@@ -30,7 +26,6 @@
         "@angular/core": "21.2.6",
         "ng-packagr": "21.2.2",
         "rxjs": "7.8.1",
-        "tailwindcss": "^4.1.0",
         "tslib": "^2.8.1",
         "typescript": "~5.9.2",
         "zone.js": "~0.15.0"

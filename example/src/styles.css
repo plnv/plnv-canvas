@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 /* Глобальные токены темы (переключение через data-theme на <html>) */
 :root,
 html[data-theme='light'] {
