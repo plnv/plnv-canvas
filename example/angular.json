@@ -76,6 +76,13 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "github-pages": {
+              "outputPath": {
+                "base": "../docs",
+                "browser": "."
+              },
+              "baseHref": "/plnv-canvas/"
             }
           },
           "defaultConfiguration": "production"
