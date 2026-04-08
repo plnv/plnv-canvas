@@ -13,6 +13,8 @@ npm run build
 
 ## Демо-приложение
 
+**Онлайн-демо:** [plnv.github.io/plnv-canvas](https://plnv.github.io/plnv-canvas/)
+
 В каталоге `example/` — демо на Angular 21. Алиас **`@plnv/canvas`** задан в **`example/tsconfig.json`** через `paths` на `../src/public-api.ts`, поэтому **`ng serve` / сборка примера не требуют предварительного `npm run build` библиотеки**.
 
 ```bash
