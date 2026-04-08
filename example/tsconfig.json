@@ -6,7 +6,10 @@
     "outDir": "./dist/out-tsc",
     "baseUrl": ".",
     "paths": {
-      "@plnv/canvas": ["../src/public-api.ts"]
+      "@plnv/canvas": ["../src/public-api.ts"],
+      "@angular/*": ["./node_modules/@angular/*"],
+      "rxjs": ["./node_modules/rxjs"],
+      "rxjs/*": ["./node_modules/rxjs/*"]
     },
     "strict": true,
     "noImplicitOverride": true,
