@@ -31,22 +31,6 @@ npm run example:serve  # только ng serve в example/
 
 После открытия в браузере вы увидите канвас с тестовым слоем и кнопку «Перерисовать».
 
-## Публикация на GitHub
-
-1. На GitHub создайте пустой репозиторий (например `plnv-canvas`).
-2. В `package.json` замените поле `repository.url` на URL вашего репозитория.
-3. При необходимости поправьте `LICENSE` (владелец copyright).
-4. В каталоге `plnv-canvas` выполните:
-
-```bash
-git init
-git add .
-git commit -m "Initial import: @plnv/canvas library"
-git branch -M main
-git remote add origin https://github.com/YOUR_ORG/plnv-canvas.git
-git push -u origin main
-```
-
 ## Подключение в приложение
 
 ```bash
