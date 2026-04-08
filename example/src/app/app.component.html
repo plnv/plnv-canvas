@@ -1,0 +1,34 @@
+<main class="page">
+  <h1>&#64;plnv/canvas — демо</h1>
+  <p class="hint">
+    Пример библиотеки <strong>&#64;plnv/canvas</strong>: несколько директив-слоёв рисуют в <strong>один</strong> родительский
+    <code>canvas</code> — очередь отрисовки и размеры задаёт хост <code>plnvCanvas2d</code>.
+  </p>
+  <p class="hint">
+    Снизу вверх по стеку отрисовки: фон блока (CSS), горы <code>MountainLayer</code> (можно скрыть), затем пунктирные
+    орбиты и диски <code>SunMoonLayer</code> (светлая тема — солнце по времени суток; тёмная — луна, фаза от числа
+    месяца, 13-е — полнолуние), сверху — снег <code>SnowLayer</code> (ведите мышью). «Перерисовать» — новый силуэт гор;
+    тема на <code>html</code> (<code>data-theme</code>): по умолчанию как в ОС; кнопка справа циклически:
+    системная → светлая → тёмная → системная.
+  </p>
+  <div class="chart-surface">
+    <canvas
+      #plnvCanvas="plnvCanvasDirective"
+      plnvCanvas2d
+      [plnvCanvasRedraw]="redrawToken()"
+    >
+      <canvas appSnowLayer></canvas>
+      <canvas appSunMoonLayer></canvas>
+      @if (mountainsVisible()) {
+        <canvas appMountainLayer [mountainRedraw]="redrawToken()"></canvas>
+      }
+    </canvas>
+  </div>
+  <div class="btn-row">
+    <button type="button" class="btn" (click)="toggleMountains()">
+      {{ mountainsVisible() ? 'Скрыть горы' : 'Показать горы' }}
+    </button>
+    <button type="button" class="btn" (click)="bumpRedraw(); plnvCanvas.drawAll()">Перерисовать</button>
+    <button type="button" class="btn btn-theme" (click)="cycleTheme()">{{ themeButtonLabel() }}</button>
+  </div>
+</main>

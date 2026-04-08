@@ -1,0 +1,78 @@
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: system-ui, sans-serif;
+  color: var(--demo-page-fg);
+}
+
+h1 {
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+.hint {
+  margin: 0 0 1rem;
+  color: var(--demo-hint);
+  font-size: 0.95rem;
+}
+
+.hint code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  background: var(--demo-code-bg);
+  color: var(--demo-code-fg);
+}
+
+.chart-surface {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border: 1px solid var(--demo-chart-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--demo-chart-bg);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.chart-surface canvas {
+  display: block;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--demo-btn-border);
+  background: var(--demo-btn-bg);
+  color: var(--demo-btn-fg);
+  cursor: pointer;
+  font: inherit;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--demo-btn-hover);
+}
+
+.btn-theme {
+  margin-left: auto;
+}
+
+@media (max-width: 520px) {
+  .btn-theme {
+    margin-left: 0;
+  }
+}
